@@ -12,7 +12,7 @@ print(some_text[::-1])
 print(some_text[::-2])
 print(len(some_text))
 
-dop
+#dop
 
 
 some_text = ("hello! my name is Kateryna! "
