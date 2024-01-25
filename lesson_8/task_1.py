@@ -5,7 +5,7 @@ def get_number_pow(number, number_pow):
 
 print(get_number_pow(2,3))
 
-#####################################
+####################################
 ## number_pow 3 -> * number 2 => 8
 ## number_pow 2 -> * number 2 => 4
 ## number_pow 1 => 2
