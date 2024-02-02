@@ -5,7 +5,7 @@ min_symbol = 5
 max_symbol = 20
 def user_email_adress(email_list):
     for email in email_list:
-        if re.match(r'^[a-zA-Z0-9._%+-]+@gmail\.com$', email) and max_symbol > len(email) > min_symbol:
+        if re.match(r'^[\w._%+-]+@gmail\.com$', email) and max_symbol > len(email) > min_symbol:
             print("Valid address:", email)
         else:
             print("Invalid address:", email)

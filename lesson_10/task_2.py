@@ -7,7 +7,7 @@ def phone_numbers(phone_number_list):
         if re.findall(r'^\+\d+$', phone_number) and len(phone_number) == 13:
             print("Valid number:", phone_number, "len of number = +12")
         elif re.findall(r'^\d+$', phone_number) and len(phone_number) == 10:
-            print("Valid number:", phone_number, "len of number = 10" )
+            print("Valid number:", phone_number, "len of number = 10")
         else:
             print("Invalid number", phone_number)
 
