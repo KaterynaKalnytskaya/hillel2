@@ -24,8 +24,8 @@ with open("text1.txt", "r") as test_file:
     text = test_file.read()
     forbidden_word = re.findall(r'\b[Dd]ie\b', text)
     for word in forbidden_word:
-        text = re.sub(r'\b' + re.escape(word) + r'\b', '***', text)
+        text = re.sub(r'\b[Dd]ie\b', '***', text)
         forbidden_word_count = len(forbidden_word)
-with open("text1.txt", "w") as test_file:
+with open("text1.txt", "a") as test_file:
     test_file.write(text)
 print("Forbidden words corrected! The number of words:", forbidden_word_count)
