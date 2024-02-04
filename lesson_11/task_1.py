@@ -17,6 +17,12 @@ print("Filtered words have been written to text2.txt", count_of_words)
 
 with open("text1.txt", "r") as test_file:
     text = test_file.read()
+    number_of_words = re.findall(r'\b\w+\b', text)
+    word_count = len(number_of_words)
+print("The number of words in the text: ", word_count)
+
+with open("text1.txt", "r") as test_file:
+    text = test_file.read()
 forbidden_words = re.findall(r'\b[Dd]ie\b', text)
 text = re.sub(r'\b[Dd]ie\b', '***', text)
 forbidden_word_count = len(forbidden_words)
