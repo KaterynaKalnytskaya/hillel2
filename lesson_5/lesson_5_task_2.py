@@ -1,22 +1,10 @@
 numbers = [1, 5, 2, 4, 7, -4, -9]
-is_even = []
-is_odd = []
-negative = []
-positive = []
-for i in numbers:
-    if i % 2 == 0:
-        is_even.append(i)
-print(is_even)
-for q in numbers:
-    if q % 2 != 0:
-        is_odd.append(q)
-print(is_odd)
-for a in numbers:
-    if a < 0:
-        negative.append(a)
-print(negative)
-for s in numbers:
-    if s > 0:
-        positive.append(s)
-print(positive)
 
+is_even = [num for num in numbers if num % 2 == 0]
+is_odd = [num for num in numbers if num % 2 != 0]
+negative = [num for num in numbers if num < 0]
+positive = [num for num in numbers if num > 0]
+print("Even numbers:", is_even)
+print("Odd numbers:", is_odd)
+print("Negative numbers:", negative)
+print("Positive numbers:", positive)
