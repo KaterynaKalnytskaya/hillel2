@@ -21,7 +21,7 @@ class City:
         if 2 <= len(city_name) <= 15:
             self.__name_city = city_name
         else:
-            raise ValueError("Incorrect name of the city")
+            raise Exception("Incorrect name of the city")
 
     @property
     def region(self):
@@ -32,7 +32,7 @@ class City:
         if 2 <= len(name_region) <= 15:
             self.__region = name_region
         else:
-            raise ValueError("Incorrect name of the region")
+            raise Exception("Incorrect name of the region")
 
     @property
     def name_country(self):
@@ -43,7 +43,7 @@ class City:
         if 2 <= len(country_name) <= 15:
             self.__name_country = country_name
         else:
-            raise ValueError("Incorrect name of the country")
+            raise Exception("Incorrect name of the country")
 
     @property
     def population(self):
@@ -54,7 +54,7 @@ class City:
         if 100 < city_population < 4000000:
             self.__population = city_population
         else:
-            raise ValueError("Incorrect number of population")
+            raise Exception("Incorrect number of population")
 
     @property
     def city_index(self):
@@ -65,7 +65,7 @@ class City:
         if 2 <= len(index_city) <= 6:
             self.__city_index = index_city
         else:
-            raise ValueError("Incorrect index number")
+            raise Exception("Incorrect index number")
 
     @property
     def city_tel_code(self):
@@ -76,7 +76,7 @@ class City:
         if 1 <= len(telephone_code) <= 7:
             self.__city_tel_code = telephone_code
         else:
-            raise ValueError("Incorrect telephone code.")
+            raise Exception("Incorrect telephone code.")
 
 
 city1 = City()
