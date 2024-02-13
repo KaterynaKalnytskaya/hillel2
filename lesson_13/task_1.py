@@ -6,35 +6,30 @@ class Person:
         self.name = name
         self.age = age
 
-        @property
-        def name(self):
-            return self.__name
+    @property
+    def name(self):
+        return self.__name
 
-        @name.setter
-        def name(self, name):
-            if len(name) > 2:
-                self.__name = name
+    @name.setter
+    def name(self, name):
+        if len(name) > 2:
+            self.__name = name
 
-        @property
-        def age(self):
-            return self.__age
+    @property
+    def age(self):
+        return self.__age
 
-        @age.setter
-        def age(self, age):
-            if age > 18:
-                self.__age = age
+    @age.setter
+    def age(self, age):
+        if age > 18:
+            self.__age = age
 
     def show_info(self):
         print(f"Name: {self.name}, Age: {self.age}")
 
 
-katya = Person("Katya", 37)
-katya.show_info()
-print(katya.__dict__)
-
-
 class Teacher(Person):
-    def __init__(self, name, age, academy= None):
+    def __init__(self, name, age, academy=None):
         super().__init__(name, age)
         self.academy = academy
 
@@ -64,7 +59,6 @@ class Student(Person):
         print(f"University: {self.university}")
 
 
-peter = Student("Peter", 20, "Tech")
+peter = Student("Peter", 20, "Med")
 peter.show_info()
 print(peter.__dict__)
-
