@@ -72,14 +72,23 @@ test.show_info()
 
 
 class Head_teacher(Teacher):
-    def __init__(self, name, age, academy):
+    __subject = "no name"
+    def __init__(self, name, age, academy, subject=None):
         super().__init__(name, age, academy)
+        self.__subject = subject
+    @property
+    def subject(self):
+        return self.__subject
+    @subject.setter
+    def subject(self,name_subject):
+        if len(name_subject) > 4:
+            self.__subject = name_subject
 
     def show_info(self):
-        print(f"The head teacher of {self.academy} academy is {self.name}, age {self.age}.")
+        print(f"The head teacher of {self.academy} academy is {self.name}, age {self.age}. The subject is {self.__subject}")
 
 
-test = Head_teacher("Peter", 35, "Technical")
+test = Head_teacher("Peter", 35, "Technical", "Math")
 test.show_info()
 print(test.__dict__)
 print(Head_teacher.mro())
