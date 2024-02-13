@@ -1,7 +1,8 @@
 class Department:
+    __name_of_department = "no name"
+    __head_of_department = "no name"
+
     def __init__(self, name_of_department, head_of_department):
-        self.__name_of_department = "no name"
-        self.__head_of_department = "no name"
         self.name_of_department = name_of_department
         self.head_of_department = head_of_department
 
@@ -28,9 +29,10 @@ class Department:
 
 
 class Subject(Department):
+    __name_subject = None
+
     def __init__(self, name_of_department, head_of_department, name_subject=None):
         super().__init__(name_of_department, head_of_department)
-        self.__name_subject = None
         self.name_subject = name_subject
 
     @property

@@ -20,6 +20,8 @@ class Transport:
 
 
 class BaseAuto(Transport):
+    __wheels_count = 0
+
     def __init__(self, name, year, wheels_count=0):
         super().__init__(name, year)
         self.__wheels_count = wheels_count
@@ -38,6 +40,8 @@ class BaseAuto(Transport):
 
 
 class WaterTransport(Transport):
+    __displacement = 0
+
     def __init__(self, name, year, displacement=0.):
         super().__init__(name, year)
         self.__displacement = displacement
@@ -56,6 +60,8 @@ class WaterTransport(Transport):
 
 
 class Car(BaseAuto):
+    __doors_count = 0
+
     def __init__(self, name, year, wheels_count, doors_count=0):
         super().__init__(name, year, wheels_count)
         self.__doors_count = doors_count

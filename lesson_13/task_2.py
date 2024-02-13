@@ -1,4 +1,7 @@
 class Academy:
+    __name = "no name"
+    __number_of_departments = 0
+
     def __init__(self, name, number_of_departments):
         self.__name = name
         self.__number_of_departments = number_of_departments
@@ -30,6 +33,8 @@ class Academy:
 
 
 class Department(Academy):
+    __name_of_departments = "no name"
+
     def __init__(self, name, number_of_departments, name_of_department=None):
         super().__init__(name, number_of_departments)
         self.name_of_department = name_of_department

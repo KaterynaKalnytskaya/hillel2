@@ -29,6 +29,8 @@ class Person:
 
 
 class Teacher(Person):
+    __academy = "no name"
+
     def __init__(self, name, age, academy=None):
         super().__init__(name, age)
         self.academy = academy
@@ -47,6 +49,8 @@ print(alex.__dict__)
 
 
 class Student(Person):
+    __university = "no name"
+
     def __init__(self, name, age, university=None):
         super().__init__(name, age)
         self.university = university
