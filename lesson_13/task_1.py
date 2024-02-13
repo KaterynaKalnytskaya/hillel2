@@ -43,17 +43,21 @@ class Teacher(Person):
         print(f"Academy: {self.academy}")
 
 
-alex = Teacher("Alexey", 40, "Medical academy")
-alex.show_info()
-print(alex.__dict__)
-
-
 class Student(Person):
     __university = "no name"
 
     def __init__(self, name, age, university=None):
         super().__init__(name, age)
         self.university = university
+
+    @property
+    def university(self):
+        return self.__university
+
+    @university.setter
+    def university(self, name_univer):
+        if len(name_univer) > 3:
+            self.__university = name_univer
 
     def study(self):
         print(f"{self.name} study at {self.university} university")
@@ -63,6 +67,28 @@ class Student(Person):
         print(f"University: {self.university}")
 
 
-peter = Student("Peter", 20, "Med")
-peter.show_info()
-print(peter.__dict__)
+test = Student("Peter", 30, "Agriculture")
+test.show_info()
+
+
+class Head_teacher(Teacher):
+    __subject = "no name"
+    def __init__(self, name, age, academy, subject=None):
+        super().__init__(name, age, academy)
+        self.__subject = subject
+    @property
+    def subject(self):
+        return self.__subject
+    @subject.setter
+    def subject(self,name_subject):
+        if len(name_subject) > 4:
+            self.__subject = name_subject
+
+    def show_info(self):
+        print(f"The head teacher of {self.academy} academy is {self.name}, age {self.age}. The subject is {self.__subject}")
+
+
+test = Head_teacher("Peter", 35, "Technical", "Math")
+test.show_info()
+print(test.__dict__)
+print(Head_teacher.mro())
