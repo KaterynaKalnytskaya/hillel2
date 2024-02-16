@@ -58,8 +58,15 @@ class Car:
 toyota = Car("Camry", 123456)
 bmw = Car("X5", 321654)
 
+result = toyota + bmw
+print(result)
+
+result = toyota + 123
+print(result)
+
 print(toyota == bmw)
 print(toyota < bmw)
 print(toyota <= bmw)
 print(toyota > bmw)
 print(toyota >= bmw)
+print()
